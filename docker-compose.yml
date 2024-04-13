@@ -1,0 +1,34 @@
+version: '3.1'
+
+services:
+  app:
+    container_name: vitabletech-node-app
+    image: node:latest
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: bash -c "npm install && npm run dev"
+    ports:
+      - 3000:3000
+    env_file:
+      - .env
+
+  db:
+    container_name: vitabletech-db
+    image: mariadb:10.6
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: notSecureChangeMe
+
+  phpmyadmin:
+    container_name: vitabletech-phpmyadmin
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      PMA_ARBITRARY: 1
+      PMA_USER: root
+      PMA_PASSWORD: notSecureChangeMe
