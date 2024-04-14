@@ -3,7 +3,7 @@
     "username": "root",
     "password": "notSecureChangeMe",
     "database": "testdb",
-    "host": "localhost",
+    "host": "db",
     "dialect": "mysql",
     "logging": "console.log"
   },

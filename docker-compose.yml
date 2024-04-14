@@ -7,9 +7,9 @@ services:
     volumes:
       - .:/app
     working_dir: /app
-    command: bash -c "npm install && npm run dev"
+    command: bash -c "chmod +x ./setup.sh && ./setup.sh"
     ports:
-      - 3000:3000
+      - "${APP_PORT}:${PORT}" # Use the port number defined in .env for the host
     env_file:
       - .env
 
@@ -20,15 +20,15 @@ services:
     ports:
       - 3306:3306
     environment:
-      MYSQL_ROOT_PASSWORD: notSecureChangeMe
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
 
   phpmyadmin:
     container_name: vitabletech-phpmyadmin
     image: phpmyadmin
     restart: always
     ports:
-      - 8080:80
+      - ${PHPMYADMIN_PORT}:80
     environment:
       PMA_ARBITRARY: 1
       PMA_USER: root
-      PMA_PASSWORD: notSecureChangeMe
+      PMA_PASSWORD: ${DB_PASSWORD}

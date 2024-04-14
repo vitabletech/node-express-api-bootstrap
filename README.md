@@ -22,7 +22,7 @@ git clone https://github.com/vitabletech/node-express-api-bootstrap.git
 cd node-express-api-bootstrap
 ```
 
-3. Edit the `.env` file to configure your environment variables. You may also need to adjust the `docker-compose.yml` file if you wish to use non-default settings.
+3. Rename `.env_sample` to .env andEdit the `.env` file to configure your environment variables. You may also need to adjust the `docker-compose.yml` file if you wish to use non-default settings.
 
 ## Running the Application
 
@@ -45,14 +45,14 @@ docker exec -it vitabletech-node-app /bin/bash
 5. Inside the container, run the following command to synchronize the database:
 
 ```bash
-npm run sync-db
+npm run sync-db && npm run seed
 ```
 
 This command will automatically create the required tables.
 
 6. Once the database synchronization is complete, you can start working on the application.
 
-7. Access the Node.js application at [http://localhost:3000/](http://localhost:3000/).
+7. Access the Node.js application at [http://localhost/](http://localhost/).
 
 ## Enjoy!
 
