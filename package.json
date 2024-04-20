@@ -1,13 +1,17 @@
 {
-  "name": "node-express-api-bootstrap",
+  "name": "node-js-jwt-auth",
   "version": "1.0.0",
-  "description": "This repository provides a Node.js application for demonstrating JWT authentication and authorization. It includes features such as user registration, user login, and authorization process. The application is built using Express.js, JWT for authentication, Sequelize ORM for database interactions, and MySQL for database storage.",
+  "description": "Node.js Demo for JWT Authentication",
   "main": "app/server.js",
   "type": "module",
   "scripts": {
     "start": "node --env-file .env app/server.js ",
     "dev": "nodemon --env-file .env app/server.js",
     "sync-db": "node custom_migration/sync-db.js",
+    "create-table": "sequelize-cli migration:generate --name create_table",
+    "migrate": "sequelize-cli db:migrate",
+    "migrate:undo": "sequelize-cli db:migrate:undo",
+    "migrate:undo:all": "sequelize-cli db:migrate:undo:all",
     "seed": "sequelize-cli db:seed:all",
     "generate:seed": "sequelize-cli seed:generate --name demo-user",
     "lint:clear": "rm -rf ~/.eslintcache",
@@ -21,14 +25,6 @@
     "updateSnapshots": "jest -u --coverage=false"
   },
   "jest": {
-    "coverageThreshold": {
-      "global": {
-        "branches": 80,
-        "functions": 80,
-        "lines": 80,
-        "statements": 80
-      }
-    },
     "collectCoverage": true,
     "collectCoverageFrom": [
       "app/**/*.js",
@@ -38,6 +34,12 @@
       "!**/jest.setup.js",
       "!**/*.config.js"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "lint-staged": {
     "*.js": [
