@@ -1,12 +1,13 @@
 # Node App Setup Guide
 
-This guide will help you set up and run the Node.js application along with PHPMyAdmin using Docker.
+This guide will help you set up and run the Node.js application along with PHPMyAdmin using Docker with the added convenience of a development container.
 
 ## Prerequisites
 
 - Git
-- Docker
-- Node.js
+- [Docker](https://www.docker.com/)
+- [Node.js](https://nodejs.org/en)
+- [Visual Studio Code (or any editor with DevContainer support)](https://code.visualstudio.com/)
 
 ## Installation
 
@@ -32,7 +33,7 @@ cd node-express-api-bootstrap
 docker-compose up -d
 ```
 
-2. Open your web browser and go to [http://localhost:8080](http://localhost:8080) to access PHPMyAdmin.
+2. Open your web browser and go to [http://localhost:8081](http://localhost:8081) to access PHPMyAdmin.
 
 3. Create a new database named `testdb` as specified in the `.env` file. If you made any changes to the database name, ensure to create it with the updated name.
 
@@ -52,7 +53,7 @@ This command will automatically create the required tables.
 
 6. Once the database synchronization is complete, you can start working on the application.
 
-7. Access the Node.js application at [http://localhost/](http://localhost/).
+7. Access the Node.js application at [http://localhost:8080](http://localhost:8080).
 
 ## Enjoy!
 
