@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "f4b94bfe-4cbd-4018-9c7b-3a57e39a1efe",
+		"name": "Guest-Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23782028"
+	},
+	"item": [
+		{
+			"name": "Add Guest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"John Doe\",\n    \"contact\": \"123456789\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost/addguest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"addguest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Guest",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/deleteguest?guestid=8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"deleteguest"
+					],
+					"query": [
+						{
+							"key": "guestid",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Guest",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"New User\",\n    \"contact\":\"7655940312\",\n    \"guestId\": \"9\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/updateguest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"updateguest"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
