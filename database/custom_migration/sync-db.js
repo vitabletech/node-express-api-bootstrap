@@ -1,4 +1,4 @@
-import db from '../app/models/index.js';
+import db from '../../app/models/index.js';
 
 db.sequelize.sync()
   .then(() => console.log('Database sync complete.'))

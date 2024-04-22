@@ -1,7 +1,7 @@
 /* eslint-disable consistent-return */
 /* eslint-disable no-restricted-syntax */
 import jwt from 'jsonwebtoken';
-import config from '../config/auth.config.js';
+import config from '../../config/auth.config.js';
 import db from '../models/index.js';
 
 const { user: User } = db;

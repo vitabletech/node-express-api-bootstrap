@@ -1,16 +1,10 @@
 import Sequelize from 'sequelize';
-import config from '../config/db.config.js';
+import config from '../../config/db.config.js';
 import createUserModel from './User.js';
 import createRoleModel from './Role.js';
 import createGuestModel from './Guest.js';
 
-const { DB, USER, PASSWORD, HOST, DIALECT, pool } = config;
-
-const sequelize = new Sequelize(DB, USER, PASSWORD, {
-  host: HOST,
-  dialect: DIALECT,
-  pool
-});
+const sequelize = new Sequelize({...config});
 
 const db = {
   Sequelize,

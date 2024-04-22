@@ -61,7 +61,7 @@ You're all set up and ready to start working with the Node.js application. Happy
 
 ## What This Repository Offers
 
-This repository provides a Node.js application for demonstrating JWT authentication and authorization. It includes features such as user registration, user login, and authorization process. The application is built using Express.js, JWT for authentication, Sequelize ORM for database interactions, and MySQL for database storage.
+This repository provides a Node.js application for demonstrating JWT authentication and authorization. It includes features such as user registration, user login, and authorization process. The application is built using Express.js, JWT for authentication, [Sequelize ORM](https://sequelize.org/docs/v6/other-topics/migrations/) for database interactions, and MySQL for database storage.
 
 - Bootstrap project for creating APIs using Express.js
 - Pre-configured ESLint setup for code quality assurance
