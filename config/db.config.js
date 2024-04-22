@@ -1,9 +1,9 @@
 const config = {
-  HOST: process.env.DB_HOST,
-  USER: process.env.DB_USER,
-  PASSWORD: process.env.DB_PASSWORD,
-  DB: process.env.DB_NAME,
-  DIALECT: process.env.DB_DIALECT,
+  host: process.env.DB_HOST,
+  username: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  dialect: process.env.DB_DIALECT,
   pool: {
     max: parseInt(process.env.DB_POOL_MAX, 10),
     min: parseInt(process.env.DB_POOL_MIN, 10),
@@ -11,5 +11,4 @@ const config = {
     idle: parseInt(process.env.DB_POOL_IDLE, 10)
   }
 };
-
 export default config;

@@ -2,7 +2,7 @@
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import db from '../models/index.js';
-import config from '../config/auth.config.js';
+import config from '../../config/auth.config.js';
 import { SUCCESS_REGISTRATION, SUCCESS_REGISTRATION_USER_ROLE, USER_NOT_FOUND, INVALID_PASSWORD, HASHED_PASSWORD } from '../utils/constant.js';
 
 const { user: User, role: Role } = db;
