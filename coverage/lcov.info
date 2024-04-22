@@ -11,9 +11,7 @@ DA:11,0
 DA:12,0
 LF:5
 LH:0
-BRDA:10,0,0,0
-BRDA:10,0,1,0
-BRF:2
+BRF:0
 BRH:0
 end_of_record
 TN:
@@ -289,11 +287,10 @@ FNF:0
 FNH:0
 DA:7,0
 DA:9,0
-DA:15,0
-DA:24,0
-DA:27,0
-DA:31,0
-LF:6
+DA:18,0
+DA:21,0
+DA:25,0
+LF:5
 LH:0
 BRF:0
 BRH:0
