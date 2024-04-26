@@ -1,5 +1,8 @@
 import express from 'express';
+import { config } from 'dotenv';
 import applyRouter from './routes/index.js';
+
+config();
 
 const app = express();
 
