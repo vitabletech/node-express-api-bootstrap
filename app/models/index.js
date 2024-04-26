@@ -1,10 +1,11 @@
 import Sequelize from 'sequelize';
-import config from '../../config/db.config.js';
+import DB_CONFIG from '../../config/db.config.js';
 import createUserModel from './User.js';
 import createRoleModel from './Role.js';
 import createGuestModel from './Guest.js';
+import createEventModel from './Event.js';
 
-const sequelize = new Sequelize({...config});
+const sequelize = new Sequelize({...DB_CONFIG});
 
 const db = {
   Sequelize,
@@ -12,6 +13,7 @@ const db = {
   user: createUserModel(sequelize, Sequelize),
   role: createRoleModel(sequelize, Sequelize),
   guests: createGuestModel(sequelize, Sequelize),
+  events: createEventModel(sequelize, Sequelize),
   ROLES: ['user', 'admin']
 };
 

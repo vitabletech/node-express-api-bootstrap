@@ -1,4 +1,8 @@
-const config = {
+import { config } from 'dotenv';
+
+config();
+
+const DB_CONFIG = {
   host: process.env.DB_HOST,
   username: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
@@ -11,4 +15,4 @@ const config = {
     idle: parseInt(process.env.DB_POOL_IDLE, 10)
   }
 };
-export default config;
+export default DB_CONFIG;
